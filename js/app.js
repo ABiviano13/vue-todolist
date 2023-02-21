@@ -29,5 +29,7 @@ createApp({
       return {
         arrayToDoList: arrayToDo,
       }
+    },
+    methods: {
     }
 }).mount('#app')
