@@ -28,10 +28,16 @@ createApp({
     data() {
       return {
         arrayToDoList: arrayToDo,
+        inputValue: ''
       }
     },
     methods: {
-        getRemoveToDo(startIndex){
+        addTask() {
+            const newTask = this.inputValue;
+            console.log(newTask);
+            this.arrayToDoList.unshift(newTask);
+        },
+        removeTask(startIndex){
             this.arrayToDoList.splice(startIndex, 1);
         }
     }

@@ -22,9 +22,26 @@
                     <i class="fa-regular fa-pen-to-square"></i>
                 </h1>
             </div>
+
             <div class="container py-4">
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-form-label">
+                        Aggiungi task
+                    </label>
+                    <div class="col py-1">
+                        <input type="text" class="form-control" id="inputPassword" placeholder="Inserisci le attività che devi fare oggi" v-model="inputValue"/>
+                    </div>
+                    <div class="col-auto">
+                        <button @click="addTask" class="btn btn-secondary">
+                            Aggiungi
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
                 <div class="card">
-                    <ul>
+                    <ul class="list-group">
                         <li v-for = "(element, i) in arrayToDoList" :class="element.done === true ? 'check' : '' ">
                             <span class="px-2" @click="getRemoveToDo(i)">
                                 <i class="fa-solid fa-xmark"></i>
