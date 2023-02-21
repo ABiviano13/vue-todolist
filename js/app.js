@@ -33,9 +33,16 @@ createApp({
     },
     methods: {
         addTask() {
-            const newTask = this.inputValue;
-            console.log(newTask);
+            const taskValue = this.inputValue;
+            console.log(taskValue);
+            
+            const newTask = {
+                text: taskValue,
+                done: false
+            }
+
             this.arrayToDoList.unshift(newTask);
+            this.inputValue = '';
         },
         removeTask(startIndex){
             this.arrayToDoList.splice(startIndex, 1);
