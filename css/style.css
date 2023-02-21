@@ -1,3 +1,9 @@
+ul,
+ol,
+menu{
+    list-style: none;
+}
+
 .check {
     text-decoration: line-through;
 }

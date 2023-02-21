@@ -31,5 +31,8 @@ createApp({
       }
     },
     methods: {
+        getRemoveToDo(startIndex){
+            this.arrayToDoList.splice(startIndex, 1);
+        }
     }
 }).mount('#app')

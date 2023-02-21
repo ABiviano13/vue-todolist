@@ -25,8 +25,11 @@
             <div class="container py-4">
                 <div class="card">
                     <ul>
-                        <li v-for = "element in arrayToDoList" :class="element.done === true ? 'check' : '' ">
-                        {{ element.text }}
+                        <li v-for = "(element, i) in arrayToDoList" :class="element.done === true ? 'check' : '' ">
+                            <span class="px-2" @click="getRemoveToDo(i)">
+                                <i class="fa-solid fa-xmark"></i>
+                            </span>
+                            {{ element.text }}
                         </li>
                     </ul>
                 </div>
