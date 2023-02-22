@@ -34,7 +34,7 @@ createApp({
     methods: {
         addTask() {
             const taskValue = this.inputValue;
-            console.log(taskValue);
+            // console.log(taskValue);
             
             const newTask = {
                 text: taskValue,

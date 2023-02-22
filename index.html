@@ -44,7 +44,7 @@
                 <div class="card">
                     <ul class="list-group">
                         <li v-for = "(element, i) in arrayToDoList" :class="element.done === true ? 'check' : '' ">
-                            <span class="px-2" @click="getRemoveToDo(i)">
+                            <span class="px-2" @click="removeTask(i)">
                                 <i class="fa-solid fa-xmark"></i>
                             </span>
                             {{ element.text }}
